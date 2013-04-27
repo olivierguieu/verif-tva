@@ -8,6 +8,7 @@
 
 
 #import "LazyNSMutableArray.h"
+#define MAX_HISTORY_SIZE 50
 
 @implementation LazyNSMutableArray
 @synthesize  backingStore;
@@ -18,10 +19,11 @@
     if (self) {        
         bLoaded=FALSE;
         bDirty=FALSE;
-        
+        /*
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSNumber *selectedOption = [defaults objectForKey:@"historySize"];
         maxItems  = [ selectedOption intValue];
+         */
     }
     
     return self;
@@ -66,7 +68,7 @@
     [self loadHistory];  
     
     // on veut au + maxItems-1 ds listOfresults
-    while ( [backingStore count] >= maxItems )
+    while ( [backingStore count] >= MAX_HISTORY_SIZE )
     {
         [backingStore removeObjectAtIndex:0];
     }
@@ -83,7 +85,6 @@
     {
         if ( bDirty == TRUE )
         {
-            //bResWriteToFile = [backingStore writeToFile:[Helpers dataFilePath] atomically:YES];
             NSData* viesData = [NSKeyedArchiver archivedDataWithRootObject:backingStore];
             bResWriteToFile = [viesData writeToFile:[Helpers dataFilePath] atomically:YES];
             
@@ -103,7 +104,7 @@
 {
     if (bLoaded == TRUE )
     {
-        while ( [backingStore count] > maxItems )
+        while ( [backingStore count] > MAX_HISTORY_SIZE )
         {
             [backingStore removeObjectAtIndex:0];
             bDirty=TRUE;

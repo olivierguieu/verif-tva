@@ -5,12 +5,8 @@
 "MUL_VAL_3"             	= "Italiano";
 "MUL_VAL_4"             	= "Español";
 "APPLICATION_INFO_TITLE"   	= "Application Information";
-"COMPLETE_LIST"				= "VAT validation configuration";
 "APPLICATION_PARAMETERS" 	= "Advanced setup";
-"EMAIL_ADDRESS"				= "Email address";
 "VERSION"					= "Version";
-"DEFAULT_EMAIL"				= "Default email address";
-"HISTORY_SIZE"				= "History size" ;
 "DISPLAY_REGEX"				= "Display RegEx";
 "VERIFY_REGEX"				= "Verify RegEx";
 "TELLAFRIEND"               = "Tell a friend";

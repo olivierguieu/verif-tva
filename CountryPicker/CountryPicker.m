@@ -53,31 +53,6 @@ static NSDictionary *countryCodesByName = nil;
 
 @synthesize delegate;
 
-//Code initial
-//+ (void)initialize
-//{
-//NSString *path = [[NSBundle mainBundle] pathForResource:@"Countries" ofType:@"plist"];
-//countryNamesByCode = [[NSDictionary alloc] initWithContentsOfFile:path];
-//
-//NSMutableDictionary *codesByName = [NSMutableDictionary dictionary];
-//for (NSString *code in [countryNamesByCode allKeys])
-//{
-//    [codesByName setObject:code forKey:[countryNamesByCode objectForKey:code]];
-//}
-//countryCodesByName = [codesByName copy];
-//
-//NSArray *names = [countryNamesByCode allValues];
-//countryNames = AH_RETAIN([names sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)]);
-//
-//NSMutableArray *codes = [NSMutableArray arrayWithCapacity:[names count]];
-//for (NSString *name in countryNames)
-//{
-//    [codes addObject:[countryCodesByName objectForKey:name]];
-//}
-//countryCodes = [codes copy];
-//}
-//
-
 + (void)initialize
 {    
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"VATIdentificationNumberStructure" ofType:@"plist"];

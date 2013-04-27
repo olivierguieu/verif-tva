@@ -50,7 +50,7 @@
     [AddressLabel release];
     [AddressValue release];
     
-    [ImageView release];
+    ImageView = nil;
 }  
 
 @end

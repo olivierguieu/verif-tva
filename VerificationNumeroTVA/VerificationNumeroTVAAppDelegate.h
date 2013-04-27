@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "IASKAppSettingsViewController.h"
+#import <UIKit/UIKit.h>
 #import "VIESResponse.h"
 #import "LazyNSMutableArray.h"
 

@@ -16,7 +16,7 @@
     
     Boolean             bLoaded;
     Boolean             bDirty;
-    int                 maxItems;
+    //int                 maxItems;
 }
 
 @property (nonatomic, retain) NSMutableArray *backingStore;

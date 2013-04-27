@@ -40,18 +40,10 @@ void uncaughtExceptionHandler(NSException *exception)
     }
     
     ThirdViewController *myThirdViewController=[[[ThirdViewController alloc] init] autorelease];
-       
-    SecondViewController *myNavigationController=[[[SecondViewController alloc] init] autorelease];
-    
-    IASKAppSettingsViewController *mySecondViewController = [[[IASKAppSettingsViewController alloc] initWithNibName:@"IASKAppSettingsView" bundle:nil] autorelease];
-    mySecondViewController.showDoneButton = NO;
-    
-    [myNavigationController pushViewController:mySecondViewController animated:FALSE];
-
     
     self.tabBarController = [[UITabBarController alloc ] init];
     self.tabBarController.delegate = self;
-    self.tabBarController.viewControllers = [[NSArray alloc ] initWithObjects:myVerificationNumeroTVAViewController, myThirdViewController,myNavigationController, nil];
+    self.tabBarController.viewControllers = [[NSArray alloc ] initWithObjects:myVerificationNumeroTVAViewController, myThirdViewController, nil];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
@@ -215,10 +207,7 @@ void uncaughtExceptionHandler(NSException *exception)
     {
         [(FirstViewController *) viewController updateViewBasedOnUserSettings]; 
     }
-    if ( [viewController isKindOfClass:[SecondViewController class] ])
-    {
-        [(SecondViewController *) viewController updateViewBasedOnUserSettings]; 
-    }
+
     if ( [viewController isKindOfClass:[ThirdViewController class] ])
     {
         ThirdViewController *tmpThirdViewController = (ThirdViewController*) viewController;
@@ -237,10 +226,7 @@ void uncaughtExceptionHandler(NSException *exception)
         {
             [(FirstViewController*) viewController updateTitle];
         }
-        if ( [viewController isKindOfClass:[SecondViewController class] ] )
-        {
-            [(SecondViewController*) viewController updateTitle];
-        }
+
     }
 }
 
@@ -329,11 +315,12 @@ static BOOL L0AccelerationIsShaking(UIAcceleration* last, UIAcceleration* curren
 {
     if ( hostReach == nil)
     {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+       /* NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *base_URL = [defaults objectForKey:@"base_URL"];
+        */
         
         // EC website has to be reachable
-        hostReach = [[Reachability reachabilityWithHostName:base_URL] retain];
+        hostReach = [[Reachability reachabilityForInternetConnection] retain];
         
         [hostReach startNotifier];
         [self updateWSReachability:hostReach];     

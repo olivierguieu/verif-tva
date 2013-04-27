@@ -38,25 +38,6 @@
 {
     [super viewDidLoad];
     [self updateViewBasedOnUserSettings];
-    
-    // Do any additional setup after loading the view from its nib.
-
-//    // TODO A REMETTRE ? 
-//    //Petit fix pour forcer l'affichage des uibarbuttonitem ds le simulateur 4.X
-//    UIBarButtonItem *rightButton= [navigationItem rightBarButtonItem];
-//    if (rightButton == nil) 
-//    {
-//        UIBarButtonItem *myRightButton= [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteHistoryButtonPressed:)];
-//        [navigationItem setRightBarButtonItem:myRightButton];
-//        [myRightButton release];
-//    }
-//    UIBarButtonItem *leftButton= [navigationItem leftBarButtonItem];
-//    if (leftButton == nil) 
-//    {
-//        UIBarButtonItem *myLeftButton= [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(showEmailModalView)];
-//        [navigationItem setLeftBarButtonItem:myLeftButton];
-//        [myLeftButton release];
-//    }
 }
 
 
@@ -221,11 +202,7 @@
     // avec la mise en place du shake on peut etre appele sans click .... 
     if ( [[AppDelegate listOfResults] getHistoryCount] > 0 )
     {
-        // on demande d'abord une confirmation du delete ...   
-//#ifdef DEBUG
-//        NSLog(@"[deleteHistoryButtonPressed]: in %@ at line %d", NSStringFromSelector(_cmd), __LINE__);
-//#endif
-        
+        // on demande d'abord une confirmation du delete ...           
         NSString *msg = nil;
         msg = [[NSString alloc] initWithFormat:@"%@",[Helpers languageSelectedStringForKey:@"CONFIRM_DELETION_HISTORY"]];
         
@@ -243,10 +220,6 @@
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex 
 {
-//#ifdef DEBUG
-//    NSLog(@"[alertView]: in %@ at line %d", NSStringFromSelector(_cmd), __LINE__);
-//#endif
-     
     // the user clicked one of the OK button
     if (buttonIndex == 0)
     {
@@ -268,26 +241,7 @@
     picker.mailComposeDelegate = self; 
     
     [picker setSubject:[Helpers languageSelectedStringForKey:@"FROM_VERIFTVA"] ];
-    
-    // Fill out the email body text
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];   
-    NSString *defaulteMail = [defaults objectForKey:@"defaulteMail"];
-    if ( ! [defaulteMail isEqualToString:@"()"])
-    {
-        NSArray *arrayOfRecipients= [[NSArray alloc] initWithObjects:defaulteMail, nil];
-        [picker  setToRecipients:arrayOfRecipients];
-        [arrayOfRecipients release];
-    }
 
-//#if 0
-//    // exemple a utiliser pour ajouter par exemple un CSV... 
-//    // Adding the application logo... 
-//    NSString* pathToImageFile = [[NSBundle mainBundle] pathForResource:@"EuropeanUnion-57" ofType:@"png" inDirectory:@"."];
-//    UIImage* image = [UIImage imageWithContentsOfFile:pathToImageFile];
-//    NSData *data = UIImagePNGRepresentation(image);
-//    [picker addAttachmentData:data mimeType:@"image/png" 
-//                       fileName:@"EuropeanUnion-57.png"];
-//#endif
     
      // test 
     NSMutableString *emailBody;
@@ -299,9 +253,6 @@
     {
         emailBody= [[NSMutableString alloc] initWithFormat:@"<table border=\"2\" bordercolor=GREY Style=\"dashed\"><caption>%@</caption><tr><th>%@</th><th>%@</th><th>%@</th><th>%@</th><th>%@</th><th>%@</th></tr>",[Helpers languageSelectedStringForKey:@"HEADER_FOR_HISTORY"],[Helpers languageSelectedStringForKey:@"STATUS"],[Helpers languageSelectedStringForKey:@"LABEL_MEMBER_STATE"] ,[Helpers languageSelectedStringForKey:@"LABEL_VAT_NUMBER"],[Helpers languageSelectedStringForKey:@"LABEL_NAME"],[Helpers languageSelectedStringForKey:@"LABEL_ADDRESS"],[Helpers languageSelectedStringForKey:@"VERIFIED_ON_THE" ]];
     
-//#ifdef DEBUG
-//        NSLog(@"[showEmailModalView]: in %@ at line %d, emailBody %@", NSStringFromSelector(_cmd), __LINE__, emailBody);
-//#endif
               
         VIESResponse *viesResponse;
         NSMutableArray *AllResponses = [[AppDelegate listOfResults] backingStore];
@@ -339,7 +290,8 @@
     
     picker.navigationBar.barStyle = UIBarStyleBlack; // choose your style, unfortunately, Translucent colors behave quirky.
     
-    [self presentModalViewController:picker animated:YES];
+    [self presentViewController:picker animated:YES completion:nil];
+   // [self presentModalViewController:picker animated:YES];
     [picker release];
     
     [emailBody release];
@@ -376,7 +328,8 @@
             
             break;
     }
-    [self dismissModalViewControllerAnimated:YES];
+ //   [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

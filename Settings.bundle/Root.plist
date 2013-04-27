@@ -41,56 +41,6 @@
 			<string>PSGroupSpecifier</string>
 		</dict>
 		<dict>
-			<key>DefaultValue</key>
-			<string>()</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-			<key>Key</key>
-			<string>defaulteMail</string>
-			<key>KeyboardType</key>
-			<string>URL</string>
-			<key>Title</key>
-			<string>DEFAULT_EMAIL</string>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-		</dict>
-		<dict>
-			<key>Title</key>
-			<string></string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>Key</key>
-			<string>historySize</string>
-			<key>Title</key>
-			<string>HISTORY_SIZE</string>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>KeyboardType</key>
-			<string>NumberPad</string>
-			<key>DefaultValue</key>
-			<string>20</string>
-			<key>AutoCorrectionType</key>
-			<string>NO</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>(advanced setup)</string>
-			<key>Title</key>
-			<string></string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>File</key>
-			<string>Complete</string>
-			<key>Title</key>
-			<string>COMPLETE_LIST</string>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-		</dict>
-		<dict>
 			<key>Title</key>
 			<string>APPLICATION_INFO_TITLE</string>
 			<key>Type</key>
@@ -116,6 +66,21 @@
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 		</dict>
+        <dict>
+			<key>Title</key>
+			<string></string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>Complete</string>
+			<key>Title</key>
+			<string>APPLICATION_PARAMETERS</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+
 		<dict>
 			<key>FooterText</key>
 			<string></string>

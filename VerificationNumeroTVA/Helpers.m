@@ -17,17 +17,9 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(
                                                          NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-//#ifdef DEBUG
-//    NSLog(@"[dataFilePath]: in %@ at line %d: <%@>", NSStringFromSelector(_cmd), __LINE__, documentsDirectory);
-//#endif   
-    
+        
     NSString *sRes = [[NSString alloc] initWithFormat:@"%@",[documentsDirectory stringByAppendingPathComponent:kFilename]];
 
-//#ifdef DEBUG
-//    NSLog(@"[dataFilePath]: in %@ at line %d: <%@>", NSStringFromSelector(_cmd), __LINE__, sRes);
-//#endif   
-    
     return [sRes autorelease];
 }
 
@@ -128,7 +120,9 @@
 #pragma mark Formatting WS URL
  + (NSString *) getWSURL
 {
-    
+    return @"http://ec.europa.eu/taxation_customs/vies/services/checkVatService";
+   
+    /*
     //what needs to be returned .... self.serviceUrl = @"http://ec.europa.eu/taxation_customs/vies/services/checkVatService";
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -137,7 +131,7 @@
     
     NSString *fullURL=[[[NSString alloc] initWithFormat:@"http://%@/%@",base_URL, wsdl_URL] autorelease];
     return  fullURL;
-    
+    */
 }
 
 

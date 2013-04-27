@@ -73,7 +73,7 @@
 
 @property(nonatomic, retain)  UIImageView  *backgroundImageView;
 
-- (IBAction) backgroundClick:(id) sender;
+// - (IBAction) backgroundClick:(id) sender;
 - (IBAction) textFieldDoneEditing:(id) sender;
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
 

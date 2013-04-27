@@ -6,12 +6,8 @@
 "MUL_VAL_3"             	= "Italiano";
 "MUL_VAL_4"             	= "Español";
 "APPLICATION_INFO_TITLE"   	= "Informations sur l'application";
-"COMPLETE_LIST"				= "Configuration avancée";
 "APPLICATION_PARAMETERS" 	= "Paramètres avancés";
-"EMAIL_ADDRESS"				= "Adresse e-mail";
 "VERSION"					= "Version";
-"DEFAULT_EMAIL"				= "e-Mail par défaut";
-"HISTORY_SIZE"				= "Taille de l'historique" ;
 "DISPLAY_REGEX"				= "Aff. expr. régulières";
 "VERIFY_REGEX"				= "Vérif. expr. régulières";
 "TELLAFRIEND"               = "Pour envoyer à un ami";

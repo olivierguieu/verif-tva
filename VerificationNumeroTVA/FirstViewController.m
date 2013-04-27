@@ -50,6 +50,7 @@
     
 }
 
+/*
 - (IBAction) backgroundClick:(id) sender
 {
     [self updateCheckButtonStatusWithIndex:-1 ];
@@ -57,7 +58,7 @@
     [tvaNumField resignFirstResponder];
     [countryPicker resignFirstResponder];
 }
-
+*/
      
 
 - (BOOL)textField:(UITextField *)textField
@@ -360,11 +361,7 @@ replacementString:(NSString *)string
 #pragma mark - display answers
 
 - (void) displayNetworkRequestedForCheckVat 
-{
-//#ifdef DEBUG
-//    NSLog(@"[displayNetworkRequestedForCheckVat]: in %@ at line %d", NSStringFromSelector(_cmd), __LINE__);
-//#endif
-    
+{   
  	NSString *msg = [[NSString alloc] initWithFormat:@"%@",[Helpers languageSelectedStringForKey:@"NETWORK_ACCESS_IS_REQUESTED"]];
     
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[Helpers languageSelectedStringForKey:@"NO_NETWORK"] message:msg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -376,9 +373,6 @@ replacementString:(NSString *)string
 
 - (void) displayErrorInCheckVatResponse: (id) error
 {
-//#ifdef DEBUG
-//    NSLog(@"[displayErrorInCheckVatResponse]: in %@ at line %d", NSStringFromSelector(_cmd), __LINE__);
-//#endif
     
     if ( ++nbNetworkErrorDisplayed == 1)
 	{
@@ -659,6 +653,7 @@ NSInteger alphabeticSort(id string1, id string2, void *reverse)
 }
 
 
+/*
 #ifdef __IPHONE_3_0
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration {
 #else
@@ -695,7 +690,7 @@ NSInteger alphabeticSort(id string1, id string2, void *reverse)
         }
     }
  
-
+*/
     
 
 
