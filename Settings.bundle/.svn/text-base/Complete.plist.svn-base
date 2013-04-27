@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>APPLICATION_PARAMETERS</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+			<key>DefaultValue</key>
+			<string>taxation_customs/vies/services/checkVatService</string>
+			<key>Key</key>
+			<string>wsdl_URL</string>
+			<key>KeyboardType</key>
+			<string>URL</string>
+			<key>Title</key>
+			<string>URL</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>ec.europa.eu</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+			<key>Key</key>
+			<string>base_URL</string>
+			<key>KeyboardType</key>
+			<string>URL</string>
+			<key>Title</key>
+			<string>Base URL</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+		</dict>
+		<dict>
+			<key>TrueValue</key>
+			<string>YES</string>
+			<key>FalseValue</key>
+			<string>NO</string>
+			<key>DefaultValue</key>
+			<string>YES</string>
+			<key>Key</key>
+			<string>verify_Regex</string>
+			<key>Title</key>
+			<string>VERIFY_REGEX</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+		</dict>
+		<dict>
+			<key>TrueValue</key>
+			<string>YES</string>
+			<key>FalseValue</key>
+			<string>NO</string>
+			<key>DefaultValue</key>
+			<string>NO</string>
+			<key>Key</key>
+			<string>show_Regex</string>
+			<key>Title</key>
+			<string>DISPLAY_REGEX</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>

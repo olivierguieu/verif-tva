@@ -1,0 +1,221 @@
+10
+
+dir
+608
+svn://macmini.local/VerifTVA/trunk/CoreFoundation.framework/Versions/A/Resources
+svn://macmini.local
+
+
+
+2011-12-05T20:30:55.399526Z
+348
+olivierguieu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7b82669d-7a3b-4b10-a85e-b43cd9669f02
+
+ja.lproj
+dir
+
+version.plist
+file
+
+
+
+
+2013-04-27T11:47:12.000000Z
+eb209e2e6caa9c26dcfcd6e247200de5
+2011-12-05T20:30:55.399526Z
+348
+olivierguieu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+446
+
+zh_TW.lproj
+dir
+
+fi.lproj
+dir
+
+Info.plist
+file
+
+
+
+
+2013-04-27T11:47:12.000000Z
+9c788e83befe9fb9022038d9ad1e2cf1
+2011-12-05T20:30:55.399526Z
+348
+olivierguieu
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+475
+
+zh_CN.lproj
+dir
+
+en.lproj
+dir
+
+BridgeSupport
+dir
+
+French.lproj
+dir
+
+es.lproj
+dir
+
+nl.lproj
+dir
+
+ko.lproj
+dir
+
+pl.lproj
+dir
+
+no.lproj
+dir
+
+tokruleBE.data
+file
+
+
+
+
+2013-04-27T11:47:12.000000Z
+ecb1963c8abb503565e546b4fecc39a6
+2011-12-05T20:30:55.399526Z
+348
+olivierguieu
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+126648
+
+Italian.lproj
+dir
+
+pt.lproj
+dir
+
+da.lproj
+dir
+
+pt_PT.lproj
+dir
+
+ru.lproj
+dir
+
+de.lproj
+dir
+
+sv.lproj
+dir
+
+tokruleLE.data
+file
+
+
+
+
+2013-04-27T11:47:12.000000Z
+ecafad4995eeb3ed1487d493030dbb0f
+2011-12-05T20:30:55.399526Z
+348
+olivierguieu
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+126648
+

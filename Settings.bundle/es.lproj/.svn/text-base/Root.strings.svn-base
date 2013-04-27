@@ -1,0 +1,17 @@
+"ABOUT"                     = "Sobre";
+"MUL_VAL"               	= "Mostrar en el ";
+"MUL_VAL_1"             	= "Français";
+"MUL_VAL_2"             	= "English";
+"MUL_VAL_3"             	= "Italiano";
+"MUL_VAL_4"             	= "Español";
+"APPLICATION_INFO_TITLE"   	= "Información";
+"COMPLETE_LIST"				= "Configuración del IVA";
+"APPLICATION_PARAMETERS" 	= "Configuración avanzada";
+"EMAIL_ADDRESS"				= "Correo electrónico";
+"VERSION"					= "Versión";
+"DEFAULT_EMAIL"				= "Correo electrónico predeterminado";
+"HISTORY_SIZE"				= "Núm. de elementos" ;
+"DISPLAY_REGEX"				= "Mostrar RegEx";
+"VERIFY_REGEX"				= "Compruebe RegEx";
+"TELLAFRIEND"               = "Enviar a un amigo";
+
