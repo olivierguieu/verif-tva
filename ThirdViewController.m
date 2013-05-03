@@ -38,6 +38,13 @@
 {
     [super viewDidLoad];
     [self updateViewBasedOnUserSettings];
+    
+    // Ajout de l'image en background
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default@2x.png"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
+    [tempImageView release];
 }
 
 
