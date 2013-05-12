@@ -44,6 +44,7 @@
 		362BB8C8137431CB000DF133 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362BB8C7137431C7000DF133 /* SystemConfiguration.framework */; };
 		36429917149E340700A08D99 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36429916149E340700A08D99 /* MainWindow.xib */; };
 		3645F4C4150A619D008D200E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 367EEB23137C827A00D1084C /* Default@2x.png */; };
+		36609C2C17375D000009248D /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36609C2B17375D000009248D /* libFlurry.a */; };
 		366A88E01390594500A5CD6C /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 366A88DF1390594500A5CD6C /* ok.png */; };
 		366A88E21390597500A5CD6C /* ko.png in Resources */ = {isa = PBXBuildFile; fileRef = 366A88E11390597500A5CD6C /* ko.png */; };
 		36733B8014A1050100DCD66E /* Icon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 36733B7F14A1050100DCD66E /* Icon72.png */; };
@@ -68,7 +69,6 @@
 		36EC349B1374892200BAF058 /* VATIdentificationNumberStructure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36EC349A1374892200BAF058 /* VATIdentificationNumberStructure.plist */; };
 		36F9FF26138C430D00851500 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F9FF25138C430C00851500 /* Helpers.m */; };
 		F28E2AD6152E324B0053B25D /* EL.png in Resources */ = {isa = PBXBuildFile; fileRef = F28E2AD5152E324B0053B25D /* EL.png */; };
-		F2A90B34152A406400B1D609 /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A90B33152A406400B1D609 /* libFlurryAnalytics.a */; };
 		F2A90B3E152A438C00B1D609 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2A90B3B152A438C00B1D609 /* Countries.plist */; };
 		F2A90B3F152A438C00B1D609 /* CountryPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A90B3D152A438C00B1D609 /* CountryPicker.m */; };
 		F2A90C3A152A439A00B1D609 /* AC.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A90B41152A439900B1D609 /* AC.png */; };
@@ -393,6 +393,8 @@
 		36566CCA1372FE9800BB7F53 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		36566CCB1372FE9800BB7F53 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		36566CCE1372FE9800BB7F53 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		36609C2A17375D000009248D /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		36609C2B17375D000009248D /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		366A88DF1390594500A5CD6C /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		366A88E11390597500A5CD6C /* ko.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ko.png; sourceTree = "<group>"; };
 		36733B7F14A1050100DCD66E /* Icon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon72.png; sourceTree = "<group>"; };
@@ -699,7 +701,7 @@
 				362BB7DE1373E2C7000DF133 /* UIKit.framework in Frameworks */,
 				362BB7DF1373E2C7000DF133 /* Foundation.framework in Frameworks */,
 				362BB7E01373E2C7000DF133 /* CoreGraphics.framework in Frameworks */,
-				F2A90B34152A406400B1D609 /* libFlurryAnalytics.a in Frameworks */,
+				36609C2C17375D000009248D /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +942,8 @@
 		F2A90B31152A406400B1D609 /* FlurryAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				36609C2A17375D000009248D /* Flurry.h */,
+				36609C2B17375D000009248D /* libFlurry.a */,
 				F2A90B32152A406400B1D609 /* FlurryAnalytics.h */,
 				F2A90B33152A406400B1D609 /* libFlurryAnalytics.a */,
 			);

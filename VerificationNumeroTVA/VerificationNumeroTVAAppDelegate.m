@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 
 @implementation VerificationNumeroTVAAppDelegate
 
@@ -18,7 +18,7 @@
 #pragma mark - Exception Handling
 void uncaughtExceptionHandler(NSException *exception) 
 {
-    [FlurryAnalytics logError:@"Uncaught" message:@"Crash!" exception:exception];
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -26,7 +26,7 @@ void uncaughtExceptionHandler(NSException *exception)
     //... 
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
-    [FlurryAnalytics startSession:@"GZ78CKMWIC372UUHL9G4"];
+    [Flurry startSession:@"GZ78CKMWIC372UUHL9G4"];
     
     // Creation des controllers
     FirstViewController * myVerificationNumeroTVAViewController;   
